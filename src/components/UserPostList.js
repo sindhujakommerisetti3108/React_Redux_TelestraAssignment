@@ -22,10 +22,10 @@ const UserPostList = () => {
     <>
       <div className="navigate-back">
         <button className="btn  btn-add" onClick={handleAdd}>
-          Add new post
+          Add New Post
         </button>
         <button className="btn btn-back" onClick={handleBack}>
-          User's List
+          Back to User's List
         </button>
       </div>
       <div className="posts-container">

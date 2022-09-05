@@ -27,8 +27,8 @@ const EditPost = () => {
   const [desc, setDesc] = useState(postdetails[1]);
 
   const handleEditPost = () => {
-    if(title!==postdetails[0]||desc!==postdetails[1]){
-      console.log("title is",title,"title alreadt",postdetails[0]);
+    if(title!==postdetails[0]&&desc!==postdetails[1]&&title!==""&&desc!==""){
+      console.log("title is",title,"title already",postdetails[0]);
       dispatch(editPost(title, desc, Number(postdetails[2])));
       history.push("/posts");
     }
@@ -43,7 +43,7 @@ const EditPost = () => {
     <>
       <div className="navigate-back">
         <button className="btn btn-posts" onClick={handleBackPosts}>
-          Posts
+         Back to Posts
         </button>
       </div>
       <form className="edit-form">
@@ -64,7 +64,7 @@ const EditPost = () => {
           <label> Enter Post </label>
           <textarea
             type="text"
-            className="form-control"
+            className="form-control text-area-form"
             value={desc}
             onChange={(e) => {
               setDesc(e.target.value);

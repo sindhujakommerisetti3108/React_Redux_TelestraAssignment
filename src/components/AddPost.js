@@ -25,7 +25,7 @@ const AddPost = () => {
     <>
       <div className="navigate-back">
         <button className="btn btn-posts" onClick={handleBackPosts}>
-          Posts
+         Back to Posts
         </button>
       </div>
       <form className="add-form">
@@ -48,7 +48,7 @@ const AddPost = () => {
           <textarea
             type="text"
             placeholder="Enter Post"
-            className="form-control"
+            className="form-control text-area-form"
             value={desc}
             onChange={(e) => {
               setDesc(e.target.value);
